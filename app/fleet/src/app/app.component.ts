@@ -10,7 +10,7 @@ import { TransladosPage } from '../pages/translados/translados';
 import { ResumoPage } from '../pages/resumo/resumo';
 import { BuscaPage } from '../pages/busca/busca';
 import { WelcomePage } from '../pages/welcome/welcome';
-
+import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
 
 @Component({
   templateUrl: 'app.html'

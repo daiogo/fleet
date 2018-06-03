@@ -10,6 +10,7 @@ import { ResumoPage } from '../pages/resumo/resumo';
 import { PassageiroPage } from '../pages/passageiro/passageiro';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { WelcomePage } from '../pages/welcome/welcome';
+import { SolicitacaoPage } from '../pages/solicitacao/solicitacao';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ResumoPage,
     PassageiroPage,
     PerfilPage,
-    WelcomePage
+    WelcomePage,
+    SolicitacaoPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ResumoPage,
     PassageiroPage,
     PerfilPage,
-    WelcomePage
+    WelcomePage,
+    SolicitacaoPage
   ],
   providers: [
     StatusBar,
