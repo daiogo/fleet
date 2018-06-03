@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Busca
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1" style="background-color:#3399CC;">
+  <ion-card id="busca-card21">
+    <ion-list>
+      <form id="busca-form3">
+        <ion-item id="busca-input2">
+          <ion-label></ion-label>
+          <ion-input type="text" placeholder="Para qual aeroporto?" name="airport"></ion-input>
+        </ion-item>
+        <div class="spacer" style="height:10px;" id="busca-spacer2"></div>
+        <div id="busca-markdown4" class="show-list-numbers-and-dots">
+          <p class="paragraph" class="paragraph" style="color:#4E505A;">
+            Sugestões da Fleet para você
+          </p>
+        </div>
+        <ion-list id="busca-list4">
+          <ion-item color="none" id="busca-list-item20">
+            <ion-icon name="plane" item-left></ion-icon>
+            GRU - Aeroporto de Guarulhos
+          </ion-item>
+          <ion-item color="none" id="busca-list-item21">
+            <ion-icon name="plane" item-left></ion-icon>
+            CGH - Aeroporto de Congonhas
+          </ion-item>
+        </ion-list>
+      </form>
+    </ion-list>
+  </ion-card>
+  <ion-card id="busca-card22">
+    <ion-list>
+      <form id="busca-form5">
+        <ion-item id="busca-input4">
+          <ion-label stacked>
+            Data da viagem:
+          </ion-label>
+          <ion-input type="date" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item id="busca-input5">
+          <ion-label stacked>
+            Horário de embarque:
+          </ion-label>
+          <ion-input type="time" placeholder=""></ion-input>
+        </ion-item>
+        <ion-item id="busca-input6">
+          <ion-label stacked>
+            Número de pessoas:
+          </ion-label>
+          <ion-input type="number" placeholder=""></ion-input>
+        </ion-item>
+        <div id="busca-container1">
+          <div class="spacer" style="height:10px;" id="busca-spacer3"></div>
+          <div id="busca-markdown8" class="show-list-numbers-and-dots">
+            <p class="paragraph" style="color:#4E505A;">
+              Informações de bagagem:
+            </p>
+          </div>
+        </div>
+        <ion-item id="busca-input8">
+          <ion-label></ion-label>
+          <ion-input type="number" placeholder="Nº de bagagens pequenas" name="smallBaggage"></ion-input>
+        </ion-item>
+        <ion-item id="busca-input10">
+          <ion-label></ion-label>
+          <ion-input type="number" placeholder="Nº de bagagens grandes" name="largeBaggage"></ion-input>
+        </ion-item>
+        <div id="busca-markdown9" class="show-list-numbers-and-dots">
+          <br>
+          <p class="paragraph" style="color:#4E505A;">
+            <strong>
+              *Desconsiderar bolsas, pastas e mochilas com laptop
+            </strong>
+          </p>
+          <br>
+        </div>
+      </form>
+      <div style="width:100%;height:auto;margin:0px 0px;line-height:250px;background-color:#e8ebef;text-align:center;">
+        <i class="icon ion-image" style="font-size:64px;color:#888;vertical-align:middle;"></i>
+      </div>
+    </ion-list>
+  </ion-card>
+  <button id="busca-button3" ion-button color="dark" block style="color:#FFFFFF;" on-click="goToResultados()">
+    Buscar translado
+  </button>
+</ion-content>
