@@ -1,20 +1,25 @@
 var mongoose = require('mongoose');
 
 var vehicleSchema = {
-	vehicleId: {
+	vid: {					// Vehicle ID
 		type: String
 	},
-	routeId: {
+	did: {					// Driver ID
 		type: String
 	},
-	routeName: {
+	licensePlate: {
 		type: String
 	},
-	startDate: {
-		type: Date
+	manufacturer: {
+		type: String
 	},
-	endDate: {
-		type: Date
+	model: {
+		type: String
+	},
+	type: {
+		type: String,
+		required: true,
+		match: /^(Hatch|Sedan|Wagon|SUV)$/
 	}
 };
 

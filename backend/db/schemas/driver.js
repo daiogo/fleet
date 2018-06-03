@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
-var userSchema = {
-	uid: {
+var driverSchema = {
+	did: {
 		type: String,
 		required: true
 	},
@@ -19,22 +19,13 @@ var userSchema = {
 	phone: {
 		type: String
 	},
-	headline: {
-		type: String
-	},
 	rating: {
 		type: Number
 	},
-	interests: {
+	languages: {
 		type: [String]
-	},
-	linkedin: {
-		type: String
-	},
-	facebook: {
-		type: String
 	}
 };
 
-module.exports = new mongoose.Schema(userSchema);
-module.exports.userSchema = userSchema;
+module.exports = new mongoose.Schema(driverSchema);
+module.exports.driverSchema = driverSchema;

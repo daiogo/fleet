@@ -6,16 +6,20 @@
 var express = require('express');					// Express.js
 var mongoose = require('mongoose');					// mongoose (MongoDB driver)
 var bodyparser = require('body-parser');			// body-parser (parse HTTP request body)
-var tripSchema = require('./db/schemas/trip');
+var driverSchema = require('./db/schemas/driver');
+var stretchSchema = require('./db/schemas/stretch');
+var transferSchema = require('./db/schemas/transfer');
 var userSchema = require('./db/schemas/user');
 var vehicleSchema = require('./db/schemas/vehicle');
 
 // Connects mongoose to mongodb service
-mongoose.connect('mongodb://fleet:fl337@ds053216.mlab.com:53216/fleet');
+//mongoose.connect('mongodb://fleet:fl337@ds053216.mlab.com:53216/fleet');
 
 // Creates mongoose models for each schema
 // Parameters are: model name, schema, collection name
-var Trip = mongoose.model('Trip', tripSchema, 'trips');
+var Driver = mongoose.model('Driver', driverSchema, 'drivers');
+var Stretch = mongoose.model('Stretch', stretchSchema, 'stretches');
+var Transfer = mongoose.model('Transfer', transferSchema, 'transfers');
 var User = mongoose.model('User', userSchema, 'users');
 var Vehicle = mongoose.model('Vehicle', vehicleSchema, 'vehicles');
 
@@ -148,25 +152,6 @@ module.exports = function() {
 		});	
 
 	});
-
-	/* =====================FRONT END ROUTES=====================*/
-
-	// Index page
-	app.get('/', function(req, res) {
-        res.sendFile('/public/index.html'); // load our public/index.html file
-    });
-
-    app.get('/admin/trips', function(req, res) {
-        res.sendFile(__dirname + '/public/views/tripsView.html');
-    });
-
-    app.get('/admin/users', function(req, res) {
-        res.sendFile(__dirname + '/public/views/usersView.html');
-    });
-
-    app.get('/admin/vehicles', function(req, res) {
-        res.sendFile(__dirname + '/public/views/vehiclesView.html');
-    });
-
+	
 	return app;
 }
